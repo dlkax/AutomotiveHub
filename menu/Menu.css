@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/*barra superior*/
+header {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0px;
+    position: relative;
+}
+
+/*container do conteudo do header*/
+.menu {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*menu principal*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*estilo e animação do link*/
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: #252525;
+    font-weight: 500;
+    padding: 5px 0;
+    top: 10px;
+}
+
+/*animação do link*/
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 0%;
+    height: 2px;
+    background-color: #2C3E50;
+    transition: width 0.3s ease;
+}
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+/*área de login/cadastro*/
+.auth{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    left: 95%;
+}
+
+/*estilos individuais do login/signup*/
+.auth .login{
+    text-decoration: none;
+    color: #252525;
+    font-weight: 500;
+}
+
+.auth .signup{
+    text-decoration: none;
+    color: #252525;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.auth .signup:hover{
+    text-decoration: underline;
+}
+
