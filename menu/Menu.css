@@ -89,11 +89,13 @@ header {
     text-decoration: underline;
 }
 
+/*estilos logo*/
+
 .Logo img{
     position: absolute;
-    height: 0px;
+    height: 100px;
     left: -160%;
-    top: -4.5rem;
+    top: -2.5rem;
     width: auto;
     object-fit: contain;
 }
