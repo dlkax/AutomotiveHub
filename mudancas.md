@@ -20,3 +20,15 @@ li-a = Links - links de info do site
 auth = autenticação do site
 
 Css está feito e organizado, com as informações certinhas de cada div ou class, pra q não confunda na correção ou alteração.
+
+--------------------------------------------------
+
+Leonardo: 12/04/2025
+
+00:30 - html de "login" está estruturado, faltando complementação com css e js.
+
+-----------------------------------------------------
+
+Leonardo: 14/04/2025
+
+19:24 - css de "login" feito.
