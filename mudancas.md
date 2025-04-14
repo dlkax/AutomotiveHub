@@ -32,3 +32,9 @@ Leonardo: 12/04/2025
 Leonardo: 14/04/2025
 
 19:24 - css de "login" feito.
+
+----------------------------------------------------
+
+Diego: 14/04/2025
+
+19:56 - adicionei um background color no site, utilizando a cor "#C2C2C2" (cinza) e ja tenho acesso ao login criado.
