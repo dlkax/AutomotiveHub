@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Login</title>
+    <link rel="stylesheet" href="style.css" /> <!-- Se for usar CSS separado -->
 </head>
 <body>
 
     <header>
         <nav class="menu">
+            <div class="logo">
+                <img src="/img/logo/ChatGPT_Image_10_de_abr._de_2025__20_37_34-removebg-preview.png" alt="Logo do site" />
+            </div>
+
             <ul class="nav-links">
-                <div class="Logo">
-                    <img src="/img/logo/ChatGPT_Image_10_de_abr._de_2025__20_37_34-removebg-preview.png" alt="">
-                </div>
                 <li><a href="#Comprar">Comprar</a></li>
                 <li><a href="#Vender">Vender</a></li>
                 <li><a href="#Alugar">Alugar</a></li>
                 <li><a href="#Sobre">Sobre</a></li>
                 <li><a href="#Ajuda">Ajuda</a></li>
             </ul>
+
             <div class="auth">
                 <a href="/login/login.html" class="login">Entrar</a>
                 <a href="#cadastro" class="signup">Cadastre-se</a>
@@ -26,14 +29,19 @@
         </nav>
     </header>
     
-    <form>
-        Usuário:
-        <input type="text" name="usuario"/>
+    <main>
+        <section class="login-form">
+            <form>
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" required />
 
-        Senha:
-        <input type="text" name="senha"/>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required />
 
-        <input type="submit" value="Entrar"/>
-    </form>
+                <input type="submit" value="Entrar" />
+            </form>
+        </section>
+    </main>
+
 </body>
 </html>
