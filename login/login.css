@@ -1,38 +1,97 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.login-bar {
-    background-color: cadetblue;
-    padding: 10px;
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.login-bar input[type="text"],
-.login-bar input[type="password"] {
-    margin: 0 5px;
-    padding: 6px;
-  border: none;
-  border-radius: 4px;
+.logo img {
+    height: 50px;
 }
 
-.login-bar input[type="submit"] {
-    padding: 6px 12px;
-    background-color: aliceblue;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.auth a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.login-form input[type="submit"] {
+    padding: 12px;
+    background-color: #007bff;
     color: white;
-    border-radius: 4px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.login-bar input[type="submit"]:hover {
-    background-color: antiquewhite;
-}
-
-.login-bar label {
-    color: white;
-    margin-right:5px;
-
+.login-form input[type="submit"]:hover {
+    background-color: #0056b3;
 }
