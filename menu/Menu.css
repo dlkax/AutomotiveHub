@@ -97,8 +97,8 @@ header {
 .Logo img{
     position: absolute;
     height: 100px;
-    left: -160%;
-    top: -2.5rem;
+    left: -160.5%;
+    top: -2.4rem;
     width: auto;
     object-fit: contain;
 }
