@@ -53,7 +53,7 @@ header {
     margin-top: 4px;
 }
 
-.auth .login:hover{
+.auth .signup:hover{
     text-decoration: underline;
 }
 
