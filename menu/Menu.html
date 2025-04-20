@@ -9,11 +9,19 @@
 <body>
     <header>
         <nav class="menu">
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <div class="Logo">
                     <img src="/img/logo/ChatGPT_Image_10_de_abr._de_2025__20_37_34-removebg-preview.png" alt="">
                 </div>
-                <li><a href="#Comprar">Comprar</a></li>
+                <li class="has-submenu">
+                    <a href="#Comprar" class="submenu-toggle">Comprar</a>
+                    <ul class="submenu">
+                        <li><a href="#">Carros novos</a></li>
+                        <li><a href="#">Carros usados</a></li>
+                        <li><a href="#">Motos novas</a></li>
+                        <li><a href="#">Motos usadas</a></li>
+                    </ul>
+                </li>
                 <li><a href="#Vender">Vender</a></li>
                 <li><a href="#Alugar">Alugar</a></li>
                 <li><a href="#Sobre">Sobre</a></li>
@@ -23,7 +31,31 @@
                 <a href="/login/login.html" class="login">Entrar</a>
                 <a href="#cadastro" class="signup">Cadastre-se</a>
             </div>
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776; <!-- ícone do menu -->
+            </div>
         </nav>
     </header>
+
+    <script>
+
+        document.querySelectorAll(".submenu-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+            e.preventDefault(); // evita navegação
+            const parent = toggle.closest(".has-submenu");
+            parent.classList.toggle("active");
+        });
+    });
+
+        const toggle = document.getElementById("menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+
+    </script>
+
 </body>
 </html>
