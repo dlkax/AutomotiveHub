@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
     background-color: #C2C2C2;
 }
 
-
+/* Barra superior */
 header {
     width: 100%;
     background-color: rgb(255, 255, 255);
@@ -20,11 +20,19 @@ header {
     position: relative;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 250px 20px;
+}
+
 .cadastro-container {
     background-color: #fff;
     max-width: 400px;
     margin: 60px auto;
-    padding: 30px;
+    padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -32,8 +40,9 @@ header {
 
 .cadastro-container h1 {
     margin-bottom: 24px;
-    color: #1e3a8a; 
+    color: #1e3a8a;
 }
+
 
 form label {
     display: block;
@@ -43,12 +52,13 @@ form label {
     font-weight: 500;
 }
 
+
 form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 5px;
     transition: border 0.3s;
 }
 
@@ -57,13 +67,14 @@ form input:focus {
     outline: none;
 }
 
+
 form button {
     width: 100%;
     padding: 12px;
     background-color: #1e40af;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
