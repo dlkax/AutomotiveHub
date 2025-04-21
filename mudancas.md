@@ -44,3 +44,8 @@ Diego: 14/04/2025
 Diego: 20/04/2025
 
 17:32 - Fiz diversas mudanças no menu e no login. Deixei o header alinhado do login e a responsividade do menu está feita. Preciso melhorar mais coisas, amanha irei dar continuidade nisso.
+
+------------------------------------------
+Leonardo: 21/04/2025
+
+14:22 - cadastro 1 - css e html 
