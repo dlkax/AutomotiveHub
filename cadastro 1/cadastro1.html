@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>cadastro1</title>
+    <link rel="stylesheet" href="cadastro1.css" /> 
+</head>
+<body>
+
+    <header>
+        <nav class="menu">
+            <div class="logo">
+                <img src="/img/logo/ChatGPT_Image_10_de_abr._de_2025__20_37_34-removebg-preview.png" alt="Logo do site" />
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#Comprar">Comprar</a></li>
+                <li><a href="#Vender">Vender</a></li>
+                <li><a href="#Alugar">Alugar</a></li>
+                <li><a href="#Sobre">Sobre</a></li>
+                <li><a href="#Ajuda">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cadasto-cointainer">
+        <h1>Crie sua conta</h1>
+        <form action="processa_cadastro_php" method="POST">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required/>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required minlength="8">
+
+            <button>type="submit">Cadastrar</button>
+        </form>
+        </section>
+    </main>
+
+<footer>
+    <p>&copy; 2025 AutomotiveHub. Todos os direitos reservados.</p>
+</footer>
+
+<p>Já tem uma conta?<a href="login.html"> Entrar</a>/p>
