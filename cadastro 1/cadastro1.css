@@ -11,7 +11,7 @@ body {
     background-color: #C2C2C2;
 }
 
-/*barra superior*/
+
 header {
     width: 100%;
     background-color: rgb(255, 255, 255);
@@ -19,6 +19,7 @@ header {
     padding: 20px 0px;
     position: relative;
 }
+
 .cadastro-container {
     background-color: #fff;
     max-width: 400px;
@@ -48,9 +49,9 @@ form input {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    transition: border  0.3s;
-
+    transition: border 0.3s;
 }
+
 form input:focus {
     border-color: #1e40af;
     outline: none;
@@ -59,21 +60,20 @@ form input:focus {
 form button {
     width: 100%;
     padding: 12px;
-    background-color:#1e40af;
+    background-color: #1e40af;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-
 }
 
 form button:hover {
-    background: color #1d4ed8;;
+    background-color: #1d4ed8;
 }
 
-.cadastro-container p  {
+.cadastro-container p {
     margin-top: 15px;
     font-size: 14px;
 }
