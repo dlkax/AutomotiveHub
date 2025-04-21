@@ -38,3 +38,9 @@ Leonardo: 14/04/2025
 Diego: 14/04/2025
 
 19:56 - adicionei um background color no site, utilizando a cor "#C2C2C2" (cinza) e ja tenho acesso ao login criado.
+
+----------------------------------------------------
+
+Diego: 20/04/2025
+
+17:32 - Fiz diversas mudanças no menu e no login. Deixei o header alinhado do login e a responsividade do menu está feita. Preciso melhorar mais coisas, amanha irei dar continuidade nisso.
