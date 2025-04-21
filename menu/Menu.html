@@ -22,8 +22,21 @@
                         <li><a href="#">Motos usadas</a></li>
                     </ul>
                 </li>
-                <li><a href="#Vender">Vender</a></li>
-                <li><a href="#Alugar">Alugar</a></li>
+                <li class="has-submenu2">
+                    <a href="#Vender" class="submenu2-toggle">Vender</a>
+                    <ul class="submenu2">
+                        <li><a href="#">Vender carro</a></li>
+                        <li><a href="#">Vender moto</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu3">
+                    <a href="#Alugar" class="submenu3-toggle">Alugar</a>
+                    <ul class="submenu3">
+                        <li><a href="#">Alugar carro</a></li>
+                        <li><a href="#">Alugar moto</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="#Sobre">Sobre</a></li>
                 <li><a href="#Ajuda">Ajuda</a></li>
             </ul>
@@ -39,7 +52,8 @@
 
     <script>
 
-        document.querySelectorAll(".submenu-toggle").forEach((toggle) => {
+        // Ativa submenu "Comprar"
+    document.querySelectorAll(".submenu-toggle").forEach((toggle) => {
         toggle.addEventListener("click", (e) => {
             e.preventDefault(); // evita navegação
             const parent = toggle.closest(".has-submenu");
@@ -47,12 +61,31 @@
         });
     });
 
-        const toggle = document.getElementById("menu-toggle");
-        const navLinks = document.querySelector(".nav-links");
-
-        toggle.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
+    // Ativa submenu "Vender"
+    document.querySelectorAll(".submenu2-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+            e.preventDefault(); // evita navegação
+            const parent = toggle.closest(".has-submenu2");
+            parent.classList.toggle("active");
         });
+    });
+
+    // Ativa submenu "Alugar"
+    document.querySelectorAll(".submenu3-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+            e.preventDefault(); // evita navegação
+            const parent = toggle.closest(".has-submenu3");
+            parent.classList.toggle("active");
+        });
+    });
+
+    // Toggle do menu mobile
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 
 
     </script>

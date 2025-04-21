@@ -120,7 +120,6 @@ header {
         flex-direction: column;
         position: static;
         transform: none;
-        display: flex; /* esconde o menu */
         gap: 40px;
         padding: 20px;
         background-color: white;
@@ -131,7 +130,6 @@ header {
     }
 
     .nav-links.active {
-        display: flex; /* mostra ao clicar */
         max-height: 500px;
     }
 
@@ -157,21 +155,163 @@ header {
         justify-content: space-between;
     }
 
-    .submenu{
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
+    /* 👇 Aqui o submenu vira colapsável e se ajusta pro mobile */
+    .submenu {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
         flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+        display: flex;
+    }
+
+    .submenu li {
+        margin: 10px 0;
         padding-left: 20px;
-        margin-top: 20px;
     }
 
-    .submenu li{
-        margin: 20px 0;
-    }
-
-    .has-submenu.active .submenu{
-    max-height: 700px;
+    .has-submenu.active .submenu {
+        max-height: 500px;
     }
 }
+
+.submenu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 8px;
+    z-index: 999;
+    width: 220px;
+}
+
+.has-submenu.active .submenu{
+    max-height: 500px;
+    padding: 20px 0;
+}
+
+.has-submenu:hover .submenu{
+    display: block;
+}
+
+.submenu li {
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.submenu li a{
+    color: #252525;
+    font-size: 0.99rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submenu li a::after{
+    content: none;
+}
+
+
+.submenu2{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: absolute;
+    top: 47px;
+    left: 100px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 8px;
+    z-index: 999;
+    width: 220px;
+}
+
+.has-submenu2.active .submenu2{
+    max-height: 500px;
+    padding: 20px 0;
+}
+
+.has-submenu2:hover .submenu2{
+    display: block;
+}
+
+.submenu2 li {
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.submenu2 li a{
+    color: #252525;
+    font-size: 0.99rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submenu2 li a::after{
+    content: none;
+}
+
+.submenu3{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: absolute;
+    top: 47px;
+    left: 100px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 8px;
+    z-index: 999;
+    width: 220px;
+}
+
+.has-submenu3.active .submenu2{
+    max-height: 500px;
+    padding: 20px 0;
+}
+
+.has-submenu3:hover .submenu2{
+    display: block;
+}
+
+.submenu3 li {
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.submenu3 li a{
+    color: #252525;
+    font-size: 0.99rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submenu3 li a::after{
+    content: none;
+}
+
 
