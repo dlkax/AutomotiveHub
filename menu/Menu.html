@@ -42,7 +42,7 @@
             </ul>
             <div class="auth">
                 <a href="/login/login.html" class="login">Entrar</a>
-                <a href="#cadastro" class="signup">Cadastre-se</a>
+                <a href="/cadastro 1/cadastro1.html" class="signup">Cadastre-se</a>
             </div>
             <div class="menu-toggle" id="menu-toggle">
                 &#9776; <!-- ícone do menu -->
@@ -52,32 +52,48 @@
 
     <script>
 
-        // Ativa submenu "Comprar"
+    // Função para fechar todos os submenus
+    function fecharTodosOsSubmenus() {
+    document.querySelectorAll('.has-submenu, .has-submenu2, .has-submenu3').forEach(item => {
+        const submenu = item.querySelector('.submenu, .submenu2, .submenu3');
+        if (item.classList.contains('active')) {
+    item.classList.remove('active');
+}
+    });
+}
+
+    // Toggle do submenu "Comprar"
     document.querySelectorAll(".submenu-toggle").forEach((toggle) => {
-        toggle.addEventListener("click", (e) => {
-            e.preventDefault(); // evita navegação
-            const parent = toggle.closest(".has-submenu");
-            parent.classList.toggle("active");
-        });
+    toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const parent = toggle.closest(".has-submenu");
+        const jaAtivo = parent.classList.contains("active");
+        fecharTodosOsSubmenus();
+        if (!jaAtivo) parent.classList.add("active");
     });
+});
 
-    // Ativa submenu "Vender"
+    // Toggle do submenu "Vender"
     document.querySelectorAll(".submenu2-toggle").forEach((toggle) => {
-        toggle.addEventListener("click", (e) => {
-            e.preventDefault(); // evita navegação
-            const parent = toggle.closest(".has-submenu2");
-            parent.classList.toggle("active");
-        });
+    toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const parent = toggle.closest(".has-submenu2");
+        const jaAtivo = parent.classList.contains("active");
+        fecharTodosOsSubmenus();
+        if (!jaAtivo) parent.classList.add("active");
     });
+});
 
-    // Ativa submenu "Alugar"
+    // Toggle do submenu "Alugar"
     document.querySelectorAll(".submenu3-toggle").forEach((toggle) => {
-        toggle.addEventListener("click", (e) => {
-            e.preventDefault(); // evita navegação
-            const parent = toggle.closest(".has-submenu3");
-            parent.classList.toggle("active");
-        });
+    toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const parent = toggle.closest(".has-submenu3");
+        const jaAtivo = parent.classList.contains("active");
+        fecharTodosOsSubmenus();
+        if (!jaAtivo) parent.classList.add("active");
     });
+});
 
     // Toggle do menu mobile
     const toggle = document.getElementById("menu-toggle");
@@ -86,6 +102,22 @@
     toggle.addEventListener("click", () => {
         navLinks.classList.toggle("active");
     });
+
+    if (item.classList.contains('active')) {
+    // anima e fecha
+    setTimeout(() => {
+        item.classList.remove('active');
+    }, 400); // <- isso remove a classe só após o tempo da animação
+}
+
+    // Fecha os submenus ao clicar fora
+document.addEventListener("click", function(event) {
+    const isClickInsideMenu = event.target.closest(".has-submenu, .has-submenu2, .has-submenu3");
+    
+    if (!isClickInsideMenu) {
+        fecharTodosOsSubmenus();
+    }
+});
 
 
     </script>

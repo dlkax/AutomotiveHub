@@ -184,9 +184,9 @@ header {
 .submenu{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
     position: absolute;
-    top: 40px;
+    top: 47px;
     left: 0;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -194,11 +194,16 @@ header {
     border-radius: 8px;
     z-index: 999;
     width: 220px;
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .has-submenu.active .submenu{
     max-height: 500px;
     padding: 20px 0;
+    opacity: 1;
+    transform: translateY(0px);
+
 }
 
 .has-submenu:hover .submenu{
@@ -229,21 +234,25 @@ header {
 .submenu2{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
     position: absolute;
     top: 47px;
-    left: 100px;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 0;
     border-radius: 8px;
     z-index: 999;
     width: 220px;
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .has-submenu2.active .submenu2{
     max-height: 500px;
     padding: 20px 0;
+    opacity: 1;
+    transform: translateY(0px);
+    
 }
 
 .has-submenu2:hover .submenu2{
@@ -273,24 +282,27 @@ header {
 .submenu3{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
     position: absolute;
     top: 47px;
-    left: 100px;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 0;
     border-radius: 8px;
     z-index: 999;
     width: 220px;
+    opacity: 0;
+    transform: translateY(10px);
 }
 
-.has-submenu3.active .submenu2{
+.has-submenu3.active .submenu3{
     max-height: 500px;
     padding: 20px 0;
+    opacity: 1;
+    transform: translateY(0px);
 }
 
-.has-submenu3:hover .submenu2{
+.has-submenu3:hover .submenu3{
     display: block;
 }
 
@@ -312,6 +324,15 @@ header {
 
 .submenu3 li a::after{
     content: none;
+}
+
+.submenu.closing,
+.submenu2.closing,
+.submenu3.closing {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 
